@@ -28,11 +28,21 @@ In the second exercice, we will leverage Genie parsers to get a structured outpu
 
 
 # pyATS documentation
+## Official documentation
+
+pyATS documentation can be found here:
+
+> https://pubhub.devnetcloud.com/media/pyats/docs/getting_started/index.html
+
 ## List of supported platforms
+
+The list of supported platforms can be found here:
 
 > https://pubhub.devnetcloud.com/media/unicon/docs/user_guide/supported_platforms.html
 
 ## Typical errors
+
+Below a list of errors I encountered and the resolution. The list is not aimed to be exhaustive.
 
 ### Testbed file is not in the folder of execution
 
