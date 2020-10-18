@@ -1,8 +1,31 @@
-# Testbed
+# Pre-requisites
+## Testbed
 
 We're using the always-on CSR1000v on DevNet sandbox in the `testbed.yaml` file. More information about DevNet sandboxes here:
 
 > http://devnetsandbox.cisco.com/RM/Topology
+
+## Dependances
+
+To install the right packages, please run the command below:
+
+```
+pip install -r requirements.txt
+```
+
+
+# Exercices
+## Get CLI show command output
+
+In the first exercice, we will connect to the device and get an unstructued show command output (ex: `show ip interface brief`).
+
+## GET structured show command output
+
+In the second exercice, we will leverage Genie parsers to get a structured output (JSON). Complete list of Genie parsers can be found here:
+
+> https://pubhub.devnetcloud.com/media/genie-feature-browser/docs/#/parsers
+
+
 
 # pyATS documentation
 ## List of supported platforms
