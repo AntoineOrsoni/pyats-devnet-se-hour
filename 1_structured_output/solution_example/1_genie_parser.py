@@ -1,8 +1,10 @@
 # New module! Now using genie!
 from genie.testbed import load
+import os
 
 # Loading device information
-testbed = load('testbed.yaml')
+# Take the testbed file in the same directory where the python file is executed.
+testbed = load('{cwd}/testbed.yaml'.format(cwd=os.path.dirname(__file__)))
 csr1000v = testbed.devices["csr1000v"]
 
 # Connect to the device

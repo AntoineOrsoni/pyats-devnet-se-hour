@@ -1,8 +1,10 @@
 # New module! Now using genie!
 from genie.testbed import load
+import os
 
 # Loading device information
-testbed = load('/Users/anorsoni/Documents/Programmability/SE Hour/pyats-se-hour/2_multi_os/solution_example/testbed.yaml')
+# Take the testbed file in the same directory where the python file is executed.
+testbed = load('{cwd}/testbed.yaml'.format(cwd=os.path.dirname(__file__)))
 
 # Looping for all devices in the testbed
 for device in testbed:
