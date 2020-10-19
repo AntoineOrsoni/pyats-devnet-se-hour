@@ -17,17 +17,17 @@ pip install -r requirements.txt
 
 
 # Exercices
-## Get CLI show command output
+## 0. Get CLI show command output
 
 In the first exercice, we will connect to the device and get an unstructued show command output (ex: `show ip interface brief`).
 
-## Get structured show command output
+## 1. Get structured show command output
 
 In the second exercice, we will leverage Genie parsers to get a structured output (JSON). Complete list of Genie parsers can be found here:
 
 > https://pubhub.devnetcloud.com/media/genie-feature-browser/docs/#/parsers
 
-## Get structured show command output for multiple OS (XE and XR)
+## 2. Get structured show command output for multiple OS (XE and XR)
 
 In the third exercice, we will connect on multiple devices of the same testbed. They are running different OS (XE and XR). We will see that we can get the same structured output with the same line of code.
 
