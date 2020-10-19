@@ -1,9 +1,11 @@
 # Pre-requisites
 ## Testbed
 
-We're using the always-on CSR1000v on DevNet sandbox in the `testbed.yaml` file. More information about DevNet sandboxes here:
+We're using the always-on DevNet sandboxes in the `testbed.yaml` file. More information about DevNet sandboxes here:
 
 > http://devnetsandbox.cisco.com/RM/Topology
+
+We will be using XE and XR sandboxes for the exercices attached. Feel free to use others.
 
 ## Dependances
 

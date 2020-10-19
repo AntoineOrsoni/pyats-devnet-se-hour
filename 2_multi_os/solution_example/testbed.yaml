@@ -1,0 +1,28 @@
+testbed:
+  name: XE_Testbed
+
+devices:
+  csr1000v:
+    type: iosxe
+    os: iosxe
+    credentials:
+      default:
+        username: developer
+        password: C1sco12345
+    connections:
+      vty:
+        protocol: ssh
+        ip: ios-xe-mgmt.cisco.com
+        port: 8181
+  iosxr1:
+    type: iosxr
+    os: iosxr
+    credentials:
+      default:
+        username: admin
+        password: C1sco12345
+    connections:
+      vty:
+        protocol: ssh
+        ip: sbx-iosxr-mgmt.cisco.com
+        port: 8181
