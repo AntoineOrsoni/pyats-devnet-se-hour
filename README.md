@@ -31,6 +31,10 @@ In the second exercice, we will leverage Genie parsers to get a structured outpu
 
 In the third exercice, we will connect on multiple devices of the same testbed. They are running different OS (XE and XR). We will see that we can get the same structured output with the same line of code.
 
+Genie supported models list can be found here:
+
+> https://pubhub.devnetcloud.com/media/genie-feature-browser/docs/#/models
+
 # pyATS documentation
 ## Official documentation
 
