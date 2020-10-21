@@ -110,6 +110,74 @@ device.learn('config')
 
 > https://pubhub.devnetcloud.com/media/genie-docs/docs/userguide/utils/index.html#diff
 
+## 4. AEtest: Automated Easy Testing
+
+In this fifth exercice, we will use AEtest to define and execute test cases. In our example, we will:
+
+1. Connect to the devices (IOS XE, IOS XR),
+2. Assert their current OS version,
+3. Disconnect from the devices.
+
+### Output example
+
+```
+2020-10-21T11:05:39: %AETEST-INFO: +------------------------------------------------------------------------------+
+2020-10-21T11:05:39: %AETEST-INFO: |                            Starting common setup                             |
+2020-10-21T11:05:39: %AETEST-INFO: +------------------------------------------------------------------------------+
+2020-10-21T11:05:39: %AETEST-INFO: +------------------------------------------------------------------------------+
+2020-10-21T11:05:39: %AETEST-INFO: |                    Starting subsection connect_to_devices                    |
+2020-10-21T11:05:39: %AETEST-INFO: +------------------------------------------------------------------------------+
+2020-10-21T11:05:40: %SCRIPT-INFO: csr1000v connected
+2020-10-21T11:05:42: %SCRIPT-INFO: iosxr1 connected
+2020-10-21T11:05:42: %AETEST-INFO: The result of subsection connect_to_devices is => PASSED
+2020-10-21T11:05:42: %AETEST-INFO: The result of common setup is => PASSED
+2020-10-21T11:05:42: %AETEST-INFO: +------------------------------------------------------------------------------+
+2020-10-21T11:05:42: %AETEST-INFO: |                        Starting testcase CheckVersion                        |
+2020-10-21T11:05:42: %AETEST-INFO: +------------------------------------------------------------------------------+
+2020-10-21T11:05:42: %AETEST-INFO: +------------------------------------------------------------------------------+
+2020-10-21T11:05:42: %AETEST-INFO: |                    Starting section check_current_version                    |
+2020-10-21T11:05:42: %AETEST-INFO: +------------------------------------------------------------------------------+
+2020-10-21T11:06:01: %AETEST-INFO: The result of section check_current_version is => PASSED
+2020-10-21T11:06:01: %AETEST-INFO: The result of testcase CheckVersion is => PASSED
+2020-10-21T11:06:01: %AETEST-INFO: +------------------------------------------------------------------------------+
+2020-10-21T11:06:01: %AETEST-INFO: |                           Starting common cleanup                            |
+2020-10-21T11:06:01: %AETEST-INFO: +------------------------------------------------------------------------------+
+2020-10-21T11:06:01: %AETEST-INFO: +------------------------------------------------------------------------------+
+2020-10-21T11:06:01: %AETEST-INFO: |                 Starting subsection disconnect_from_devices                  |
+2020-10-21T11:06:01: %AETEST-INFO: +------------------------------------------------------------------------------+
+2020-10-21T11:06:27: %AETEST-INFO: The result of subsection disconnect_from_devices is => PASSED
+2020-10-21T11:06:27: %AETEST-INFO: The result of common cleanup is => PASSED
+2020-10-21T11:06:27: %AETEST-INFO: +------------------------------------------------------------------------------+
+2020-10-21T11:06:27: %AETEST-INFO: |                               Detailed Results                               |
+2020-10-21T11:06:27: %AETEST-INFO: +------------------------------------------------------------------------------+
+2020-10-21T11:06:27: %AETEST-INFO:  SECTIONS/TESTCASES                                                      RESULT   
+2020-10-21T11:06:27: %AETEST-INFO: --------------------------------------------------------------------------------
+2020-10-21T11:06:27: %AETEST-INFO: .
+2020-10-21T11:06:27: %AETEST-INFO: |-- common_setup                                                          PASSED
+2020-10-21T11:06:27: %AETEST-INFO: |   `-- connect_to_devices                                                PASSED
+2020-10-21T11:06:27: %AETEST-INFO: |-- CheckVersion                                                          PASSED
+2020-10-21T11:06:27: %AETEST-INFO: |   `-- check_current_version                                             PASSED
+2020-10-21T11:06:27: %AETEST-INFO: `-- common_cleanup                                                        PASSED
+2020-10-21T11:06:27: %AETEST-INFO:     `-- disconnect_from_devices                                           PASSED
+2020-10-21T11:06:27: %AETEST-INFO: +------------------------------------------------------------------------------+
+2020-10-21T11:06:27: %AETEST-INFO: |                                   Summary                                    |
+2020-10-21T11:06:27: %AETEST-INFO: +------------------------------------------------------------------------------+
+2020-10-21T11:06:27: %AETEST-INFO:  Number of ABORTED                                                            0 
+2020-10-21T11:06:27: %AETEST-INFO:  Number of BLOCKED                                                            0 
+2020-10-21T11:06:27: %AETEST-INFO:  Number of ERRORED                                                            0 
+2020-10-21T11:06:27: %AETEST-INFO:  Number of FAILED                                                             0 
+2020-10-21T11:06:27: %AETEST-INFO:  Number of PASSED                                                             3 
+2020-10-21T11:06:27: %AETEST-INFO:  Number of PASSX                                                              0 
+2020-10-21T11:06:27: %AETEST-INFO:  Number of SKIPPED                                                            0 
+2020-10-21T11:06:27: %AETEST-INFO:  Total Number                                                                 3 
+2020-10-21T11:06:27: %AETEST-INFO:  Success Rate                                                            100.0% 
+2020-10-21T11:06:27: %AETEST-INFO: --------------------------------------------------------------------------------
+```
+
+### AEtest documentation
+
+> https://pubhub.devnetcloud.com/media/pyats/docs/aetest/index.html
+
 # pyATS documentation
 ## Official documentation
 
