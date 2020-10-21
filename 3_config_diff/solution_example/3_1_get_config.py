@@ -1,6 +1,7 @@
 # New module! Now using genie!
 from genie.testbed import load
 import os
+import json
 
 # Loading device information
 # Take the testbed file in the same directory where the python file is executed.
@@ -20,4 +21,15 @@ for device in testbed:
 
     config = device.learn('config')
 
-    
+    # Step 1: Open the targeted file
+    with open('{cwd}/config_modified.json'.format(cwd=os.path.dirname(__file__)), 'w') as config_file:
+
+        # Step 2: Write the config
+        json.dump(config, config_file, indent=4)
+        print('config_modified of {device} has been written!'.format(device=device.alias))   
+
+    # Step 3: Do the same operation for 
+    with open('{cwd}/config_original.json'.format(cwd=os.path.dirname(__file__)), 'w') as config_file:
+
+        json.dump(config, config_file, indent=4)
+        print('config_original of {device} has been written!'.format(device=device.alias))   

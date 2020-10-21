@@ -35,6 +35,20 @@ Genie supported models list can be found here:
 
 > https://pubhub.devnetcloud.com/media/genie-feature-browser/docs/#/models
 
+## 3. Diff between two config files
+
+### Learnign the configuration of a device
+
+To learn the configuration of a device, the below command can be used:
+
+```python
+device.learn('config')
+```
+
+### Genie diff documentation
+
+> https://pubhub.devnetcloud.com/media/genie-docs/docs/userguide/utils/index.html#diff
+
 # pyATS documentation
 ## Official documentation
 
