@@ -11,7 +11,7 @@ with open('{cwd}/config_original.json'.format(cwd=os.path.dirname(__file__)), 'r
     config_original = json.load(config_file)
 
 # Step 1: Printting the differences
-dd = Diff(config_modified, config_original)
+dd = Diff(config_original, config_modified)
 dd.findDiff()
 
 print(dd)
