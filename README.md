@@ -15,15 +15,38 @@ To install the right packages, please run the command below:
 pip install -r requirements.txt
 ```
 
-
 # Exercices
 ## 0. Get CLI show command output
 
 In the first exercice, we will connect to the device and get an unstructued show command output (ex: `show ip interface brief`).
 
+### Output example
+
+```
+show ip interface brief
+Interface              IP-Address      OK? Method Status                Protocol
+GigabitEthernet1       10.10.20.48     YES other  up                    up      
+GigabitEthernet2       unassigned      YES NVRAM  administratively down down    
+GigabitEthernet3       unassigned      YES NVRAM  up                    up      
+Loopback11             1.2.3.1         YES other  up                    up  
+```
+
 ## 1. Get structured show command output
 
-In the second exercice, we will leverage Genie parsers to get a structured output (JSON). Complete list of Genie parsers can be found here:
+In the second exercice, we will leverage Genie parsers to get a structured output (JSON). Complete list of 
+
+### Output example
+
+```
+Loopback333 -- 3.3.3.3
+Loopback99 -- 99.99.99.99
+Loopback11 -- 1.2.3.1
+GigabitEthernet2 -- Unassigned
+GigabitEthernet1 -- 10.10.20.48
+GigabitEthernet3 -- Unassigned
+```
+
+### Genie parsers documentation
 
 > https://pubhub.devnetcloud.com/media/genie-feature-browser/docs/#/parsers
 
@@ -31,11 +54,49 @@ In the second exercice, we will leverage Genie parsers to get a structured outpu
 
 In the third exercice, we will connect on multiple devices of the same testbed. They are running different OS (XE and XR). We will see that we can get the same structured output with the same line of code.
 
-Genie supported models list can be found here:
+### Output example
+
+```
+-----------------------------------
+-- Connected on device: csr1000v --
+-----------------------------------
+Loopback333 -- 3.3.3.3
+Loopback99 -- 99.99.99.99
+Loopback11 -- 1.2.3.1
+GigabitEthernet2 -- Unassigned
+GigabitEthernet1 -- 10.10.20.48
+GigabitEthernet3 -- Unassigned
+
+-----------------------------------
+-- Connected on device: iosxr1 --
+-----------------------------------
+Loopback200 -- 1.1.1.200
+Loopback100 -- 1.1.1.100
+GigabitEthernet0/0/0/1 -- Unassigned
+GigabitEthernet0/0/0/0 -- Unassigned
+MgmtEth0/RP0/CPU0/0 -- 10.10.20.175
+Null0 -- Unassigned
+```
+
+### Genie supported models list
 
 > https://pubhub.devnetcloud.com/media/genie-feature-browser/docs/#/models
 
 ## 3. Diff between two config files
+
+In this fourth exercice, we will connect on the CSR1000v sandbox. We will `learn` the configuration of the device, and save it in two files.
+
+We will manually modify one of them, and use the `Diff` capability of Genie to print the change.
+
+### Output example
+
+```
+ interface Loopback2345:
+- description Added via python Antoine script: 
++ description Added via python RESTCONF script: 
++ ip address 2.3.4.5 255.255.255.255: 
+- ip address 2.3.4.6 255.255.255.255: 
+```
 
 ### Learnign the configuration of a device
 
