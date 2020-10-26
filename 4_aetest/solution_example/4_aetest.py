@@ -24,13 +24,31 @@ class CheckVersion(aetest.Testcase):
     @aetest.test
     def check_current_version(self, testbed):
 
+        # Local vars
+        test_success = True
+        xe_version = '16.9.3'
+        xr_version = '6.5.3'
+        fail_devices = []
+
         for device in testbed:
             
-            # Checking the current version of the device
+            #Learning platform information
             platform = device.learn('platform')
 
-            if platform.os == 'iosxe': assert platform.version == '16.9.3'
-            elif platform.os == 'iosxr': assert platform.version == '6.5.3'
+            # We use .lower() so we're not case sensitive
+            if (platform.os.lower() == 'iosxe' and platform.version != xe_version): 
+                test_success = False
+                fail_devices.append(device.alias)
+
+            # We use .lower() so we're not case sensitive
+            if (platform.os.lower() == 'iosxr' and platform.version != xr_version): 
+                test_success = False
+                fail_devices.append(device.alias)
+
+            logger.debug('{device} running {platformos} has OS: {os}'.format(device=device.alias, platformos=platform.os, os=platform.version))
+
+        # If we have devices with the wrong OS, print their names
+        assert test_success == True, 'List of fail devices: {list}'.format(list=fail_devices)
 
 class CommonCleanup(aetest.CommonCleanup):
 

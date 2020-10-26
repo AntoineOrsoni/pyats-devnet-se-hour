@@ -219,3 +219,9 @@ device.connect(init_exec_commands=[],
                init_config_commands=[],
                log_stdout=False)
 ```
+
+### device.learn('platform')
+
+`platform.os` has the following values for IOSXE and IOSXR:
+- `iosxe` >> lower case
+- `IOSXR` >> upper case
