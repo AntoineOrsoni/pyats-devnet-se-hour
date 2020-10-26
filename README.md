@@ -33,7 +33,7 @@ Loopback11             1.2.3.1         YES other  up                    up
 
 ## 1. Get structured show command output
 
-In the second exercice, we will leverage Genie parsers to get a structured output (JSON). Complete list of 
+In the second exercice, we will leverage Genie parsers to get a structured output (JSON). Complete list of interfaces.
 
 ### Output example
 
