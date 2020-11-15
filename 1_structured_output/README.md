@@ -19,6 +19,8 @@ The file with the exercise is in the `exercise` folder. An example of solution c
 
 ## Steps
 
+**Please note that we are now using the `Genie` library!**
+
 The testbed is already loaded for you. Fore more information about the `topology.loader.load()` API, please refer to the documentation below:
 
 https://pubhub.devnetcloud.com/media/pyats/docs/topology/creation.html#testbed-file
@@ -34,8 +36,6 @@ device.connect(init_exec_commands=[],
                init_config_commands=[],
                log_stdout=False)
 ```
-
-Please note that we are now using the `Genie` library!
 
 ### Step 0
 
