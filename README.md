@@ -50,6 +50,10 @@ GigabitEthernet1 -- 10.10.20.48
 GigabitEthernet3 -- Unassigned
 ```
 
+### Complete instructions
+
+[Complete instructions can be found here](1_structured_output/README.md)
+
 ### Genie parsers documentation
 
 > https://pubhub.devnetcloud.com/media/genie-feature-browser/docs/#/parsers
