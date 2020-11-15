@@ -13,6 +13,10 @@ GigabitEthernet3       unassigned      YES NVRAM  up                    up
 Loopback11             1.2.3.1         YES other  up  
 ```
 
+## Folders
+
+The file with the exercise is in the `exercise` folder. An example of solution can be found in the `solution_example` folder.
+
 ## Steps
 
 The testbed is already loaded for you. Fore more information about the `topology.loader.load()` API, please refer to the documentation below:
