@@ -21,11 +21,11 @@ The file with the exercise is in the `exercise` folder. An example of solution c
 
 The testbed is already loaded for you. Fore more information about the `topology.loader.load()` API, please refer to the documentation below:
 
-https://pubhub.devnetcloud.com/media/pyats/docs/topology/creation.html#testbed-file
+> https://pubhub.devnetcloud.com/media/pyats/docs/topology/creation.html#testbed-file
 
 The `connect()` method is explained here:
 
-https://pubhub.devnetcloud.com/media/pyats/docs/connections/manager.html#method-instantiate-connect
+> https://pubhub.devnetcloud.com/media/pyats/docs/connections/manager.html#method-instantiate-connect
 
 ### Step 0
 
@@ -33,7 +33,7 @@ Use the `execute()` method on the `csr1000v` object to send a CLI command to the
 
 More information about the `execute()` method here:
 
-https://pubhub.devnetcloud.com/media/pyats/docs/apidoc/connections/index.html#module-pyats.connections.bases
+> https://pubhub.devnetcloud.com/media/pyats/docs/apidoc/connections/index.html#module-pyats.connections.bases
 
 ### Step 1
 

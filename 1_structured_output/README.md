@@ -23,11 +23,11 @@ The file with the exercise is in the `exercise` folder. An example of solution c
 
 The testbed is already loaded for you. Fore more information about the `topology.loader.load()` API, please refer to the documentation below:
 
-https://pubhub.devnetcloud.com/media/pyats/docs/topology/creation.html#testbed-file
+> https://pubhub.devnetcloud.com/media/pyats/docs/topology/creation.html#testbed-file
 
 The `connect()` method is explained here:
 
-https://pubhub.devnetcloud.com/media/pyats/docs/connections/manager.html#method-instantiate-connect
+> https://pubhub.devnetcloud.com/media/pyats/docs/connections/manager.html#method-instantiate-connect
 
 Don't print the `show version`, `show running-configuration` and the output.
 
@@ -43,11 +43,11 @@ Use the `parse()` method on the `csr1000v` object to get a structured output of 
 
 Documentation can be found here:
 
-https://pubhub.devnetcloud.com/media/genie-docs/docs/cookbooks/explore.html?highlight=parse#
+> https://pubhub.devnetcloud.com/media/genie-docs/docs/cookbooks/explore.html?highlight=parse#
 
 Available parsers can be found here:
 
-https://pubhub.devnetcloud.com/media/genie-feature-browser/docs/#/parsers
+> https://pubhub.devnetcloud.com/media/genie-feature-browser/docs/#/parsers
 
 ### Step 1
 
