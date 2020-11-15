@@ -10,7 +10,5 @@ csr1000v = testbed.devices["csr1000v"]
 csr1000v.connect()
 
 # Step 0: saving the `show interface brief` output in a variable
-show_interface = csr1000v.execute('show ip interface brief')
 
 # Step 1: pritting the `show interface brief` output
-print(show_interface)

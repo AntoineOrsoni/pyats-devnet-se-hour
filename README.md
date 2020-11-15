@@ -31,6 +31,10 @@ GigabitEthernet3       unassigned      YES NVRAM  up                    up
 Loopback11             1.2.3.1         YES other  up                    up  
 ```
 
+### Complete instructions
+
+[Complete instructions can be found here](0_get_cli_show/README.md)
+
 ## 1. Get structured show command output
 
 In the second exercice, we will leverage Genie parsers to get a structured output (JSON). Complete list of interfaces.
