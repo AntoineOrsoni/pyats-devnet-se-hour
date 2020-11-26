@@ -29,7 +29,7 @@ The `connect()` method is explained here:
 
 > https://pubhub.devnetcloud.com/media/pyats/docs/connections/manager.html#method-instantiate-connect
 
-Don't print the `show version`, `show running-configuration` and the output.
+The below arguments avoid pritting the `show version`, `show running-configuration` and the output.
 
 ```python
 device.connect(init_exec_commands=[],

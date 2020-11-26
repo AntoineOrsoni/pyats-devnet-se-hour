@@ -6,19 +6,19 @@ import os
 # Take the testbed file in the same directory where the python file is executed.
 testbed = load('{cwd}/testbed.yaml'.format(cwd=os.path.dirname(__file__)))
 
-# Looping for all devices in the testbed
+# Step 0: Looping through each device in the testbed
 for device in testbed:
 
     print('')
 
+    # Step 1: Connect on the device and print its name
     device.connect(init_exec_commands=[], init_config_commands=[], log_stdout=False)
-
-    # Step 0: Saying on which device we are currently connected
+    
     print('-----------------------------------')
-    print('-- Connected on device: {device} --'.format(device=device.alias))
+    print('-- Connected on device: {device} --'.format(device=device.name))
     print('-----------------------------------')
 
-    # Step 1: Listing interfaces and IP addresses
+    # Step 2: Listing interfaces and IP addresses
     show_interface = device.parse('show ip interface brief')
 
     for interface in show_interface['interface']:
