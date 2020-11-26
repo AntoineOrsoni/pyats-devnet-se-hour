@@ -106,7 +106,7 @@ We will manually modify one of them, and use the `Diff` capability of Genie to p
 - ip address 2.3.4.6 255.255.255.255: 
 ```
 
-### Learnign the configuration of a device
+### Learning the configuration of a device
 
 To learn the configuration of a device, the below command can be used:
 
