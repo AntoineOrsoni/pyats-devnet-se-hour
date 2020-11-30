@@ -5,7 +5,6 @@ In the first exercice, we will connect to the device and get an unstructued show
 ## Output example
 
 ```
-show ip interface brief
 Interface              IP-Address      OK? Method Status                Protocol
 GigabitEthernet1       10.10.20.48     YES other  up                    up      
 GigabitEthernet2       unassigned      YES NVRAM  administratively down down    
@@ -26,6 +25,14 @@ The testbed is already loaded for you. Fore more information about the `topology
 The `connect()` method is explained here:
 
 > https://pubhub.devnetcloud.com/media/pyats/docs/connections/manager.html#method-instantiate-connect
+
+The below arguments avoid pritting the `show version`, `show running-configuration` and the output.
+
+```python
+device.connect(init_exec_commands=[],
+               init_config_commands=[],
+               log_stdout=False)
+```
 
 ### Step 0
 
