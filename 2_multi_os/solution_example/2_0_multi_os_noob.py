@@ -26,3 +26,6 @@ for device in testbed:
                                         ip=show_interface['interface'][interface]['ip_address']))   
     
     print('')
+
+    # Step 3: Disconnect from the device
+    device.disconnect()

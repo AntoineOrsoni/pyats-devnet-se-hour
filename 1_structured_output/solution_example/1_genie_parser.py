@@ -17,3 +17,6 @@ show_interface = csr1000v.parse('show ip interface brief')
 for interface in show_interface['interface']:
     print('{interface} -- {ip}'.format(interface=interface, 
                                        ip=show_interface['interface'][interface]['ip_address']))
+
+# Disconnect from the device
+csr1000v.disconnect()

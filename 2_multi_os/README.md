@@ -77,11 +77,15 @@ Genie available parsers can be found here:
 
 > https://pubhub.devnetcloud.com/media/genie-feature-browser/docs/#/models
 
+### Step 3
+
+Use the `disconnect()` method on each device to nicely disconnect from the device. Otherwise, you may exhaust the number of available VTY lines.
+
 ## File 1 - Pro version
 
-### Step 0 Step 1
+### Step 0, Step 1, Step 3
 
-You can reuse the code you did for `File 0`.
+You can reuse the code you did for `File 0`. Dont forget to `diconnect()` from each device.
 
 ### Step 1
 

@@ -31,3 +31,6 @@ for device in testbed:
             print('{interface} -- Unassigned'.format(interface=interface))
     
     print('')
+
+    # Step 3: Disconnect from the device
+    device.disconnect()
