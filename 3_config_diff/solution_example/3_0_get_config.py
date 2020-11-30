@@ -33,3 +33,6 @@ for device in testbed:
 
         json.dump(config, config_file, indent=4)
         print('config_original of {device} has been written!'.format(device=device.alias))   
+
+    # Step 4: Disconnect from the device
+    device.disconnect()

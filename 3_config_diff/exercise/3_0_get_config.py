@@ -32,4 +32,7 @@ for device in testbed:
     with open('{cwd}/config_original.json'.format(cwd=os.path.dirname(__file__)), 'w') as config_file:
 
         json.dump(config, config_file, indent=4)
-        print('config_original of {device} has been written!'.format(device=device.alias))   
+        print('config_original of {device} has been written!'.format(device=device.alias))  
+
+    # Step 4: Disconnect from the device
+    device.disconnect()
