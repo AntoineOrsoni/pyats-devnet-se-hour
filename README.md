@@ -85,6 +85,10 @@ MgmtEth0/RP0/CPU0/0 -- 10.10.20.175
 Null0 -- Unassigned
 ```
 
+### Complete instructions
+
+[Complete instructions can be found here](2_multi_os/README.md)
+
 ### Genie supported models list
 
 > https://pubhub.devnetcloud.com/media/genie-feature-browser/docs/#/models
@@ -112,6 +116,10 @@ To learn the configuration of a device, the below command can be used:
 ```python
 device.learn('config')
 ```
+
+### Complete instructions
+
+[Complete instructions can be found here](3_config_diff/README.md)
 
 ### Genie diff documentation
 
@@ -180,6 +188,10 @@ In this fifth exercice, we will use AEtest to define and execute test cases. In 
 2020-10-21T11:06:27: %AETEST-INFO:  Success Rate                                                            100.0% 
 2020-10-21T11:06:27: %AETEST-INFO: --------------------------------------------------------------------------------
 ```
+
+### Complete instructions
+
+[Complete instructions can be found here](4_aetest/README.md)
 
 ### AEtest documentation
 
