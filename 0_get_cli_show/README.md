@@ -18,11 +18,19 @@ The file with the exercise is in the `exercise` folder. An example of solution c
 
 ## Steps
 
-The testbed is already loaded for you. Fore more information about the `topology.loader.load()` API, please refer to the documentation below:
+### Step 0
+
+Load the testbed. Use the `loader.load()` API. Fore more information about the `topology.loader.load()` API, please refer to the documentation below:
 
 > https://pubhub.devnetcloud.com/media/pyats/docs/topology/creation.html#testbed-file
 
-The `connect()` method is explained here:
+### Step 1
+
+A testbed is a dictionnary. Extract the `csr1000v` device. Pritting the `testbed` might help you.
+
+### Step 2
+
+Connect to the device. Use the `connect()` method to do so. It's explained here:
 
 > https://pubhub.devnetcloud.com/media/pyats/docs/connections/manager.html#method-instantiate-connect
 
@@ -34,7 +42,7 @@ device.connect(init_exec_commands=[],
                log_stdout=False)
 ```
 
-### Step 0
+### Step 3
 
 Use the `execute()` method on the `csr1000v` object to send a CLI command to the device. Get the `show interface brief` output, and save it in a variable.
 
@@ -42,6 +50,6 @@ More information about the `execute()` method here:
 
 > https://pubhub.devnetcloud.com/media/pyats/docs/apidoc/connections/index.html#module-pyats.connections.bases
 
-### Step 1
+### Step 4
 
 Print the output.
