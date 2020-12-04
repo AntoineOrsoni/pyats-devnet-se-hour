@@ -26,7 +26,9 @@ Load the testbed. Use the `loader.load()` API. Fore more information about the `
 
 ### Step 1
 
-A testbed is a dictionnary. Extract the `csr1000v` device. Pritting the `testbed` might help you.
+A `testbed` is a `pyats.topology.testbed.Testbed` object. It has a `devices` attribute, which is a dictionnary of all devices in the testbed. 
+* Try to print it.
+* Extract the `csr1000v` device. 
 
 ### Step 2
 
