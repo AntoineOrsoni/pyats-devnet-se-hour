@@ -3,7 +3,7 @@ from genie.testbed import load
 import os
 
 # Loading device information
-cwd = cwd=os.path.dirname(__file__)
+cwd = os.path.dirname(__file__)
 
 # If the python script is executed from the local directory, use local testbed
 if cwd == '': testbed = load(f'./testbed.yaml')
