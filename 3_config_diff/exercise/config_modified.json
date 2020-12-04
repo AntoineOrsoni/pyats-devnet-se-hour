@@ -1,6 +1,6 @@
 {
     "Building configuration...": {},
-    "Current configuration : 5741 bytes": {},
+    "Current configuration : 4299 bytes": {},
     "version 16.9": {},
     "service timestamps debug datetime msec": {},
     "service timestamps log datetime msec": {},
@@ -55,7 +55,7 @@
             }
         }
     },
-    "license udi pid CSR1000V sn 9ZG9PL0JQL5": {},
+    "license udi pid CSR1000V sn 967BHPWVH2G": {},
     "license boot level ax": {},
     "no license smart enable": {},
     "diagnostic bootup level minimal": {},
@@ -66,59 +66,9 @@
     "username cisco privilege 15 secret 5 $1$aO1Y$0AFVz00ON.hE4WkY.BeYq.": {},
     "username root privilege 15 secret 5 $1$vpY7$mh9d69ui3koSaITBi8k9D/": {},
     "redundancy": {},
-    "interface Loopback11": {
-        "description Added with RESTCONF Python script JW": {},
-        "ip address 1.2.3.1 255.255.255.255": {}
-    },
-    "interface Loopback13": {
-        "ip address 13.13.13.13 255.255.255.0": {}
-    },
-    "interface Loopback99": {
-        "description Created with Ansible": {},
-        "ip address 99.99.99.99 255.255.255.0": {}
-    },
-    "interface Loopback333": {
-        "description Added with Postman": {},
-        "ip address 3.3.3.3 255.255.255.255": {}
-    },
-    "interface Loopback1010": {
-        "description Added with RESTCONF": {},
-        "ip address 101.101.101.1 255.255.255.248": {}
-    },
-    "interface Loopback1332": {
-        "description Added via RESTCONF py script": {},
-        "ip address 1.3.3.2 255.255.255.255": {}
-    },
-    "interface Loopback1333": {
-        "description Added via RESTCONF py script": {},
-        "ip address 1.3.3.3 255.255.255.255": {}
-    },
-    "interface Loopback1334": {
-        "description Added via RESTCONF py script": {},
-        "ip address 1.3.3.4 255.255.255.255": {}
-    },
-    "interface Loopback1338": {
-        "ip address 172.16.123.1 255.255.255.255": {}
-    },
-    "interface Loopback1432": {
-        "description Added via RESTCONF py script": {},
-        "ip address 1.4.3.2 255.255.255.255": {}
-    },
-    "interface Loopback1533": {
-        "description Added via RESTCONF py script": {},
-        "ip address 1.5.3.3 255.255.255.255": {}
-    },
-    "interface Loopback2345": {
-        "description Added via python Antoine script": {},
-        "ip address 2.3.4.6 255.255.255.255": {}
-    },
-    "interface Loopback10987": {
-        "description Added with RESTCONF": {},
-        "ip address 10.9.8.7 255.255.255.255": {}
-    },
-    "interface Loopback102034": {
-        "description Added with RESTCONF": {},
-        "ip address 1.2.3.4 255.255.255.255": {}
+    "interface Loopback5": {
+        "description navid": {},
+        "ip address 192.168.1.10 255.255.255.0": {}
     },
     "interface GigabitEthernet1": {
         "description MANAGEMENT INTERFACE - DON'T TOUCH ME": {},
@@ -128,7 +78,7 @@
         "no mop sysid": {}
     },
     "interface GigabitEthernet2": {
-        "description Configured via POSTMAN": {},
+        "description Network Interface": {},
         "no ip address": {},
         "shutdown": {},
         "negotiation auto": {},
@@ -136,21 +86,18 @@
         "no mop sysid": {}
     },
     "interface GigabitEthernet3": {
+        "description Network Interface": {},
         "no ip address": {},
+        "shutdown": {},
         "negotiation auto": {},
         "no mop enabled": {},
         "no mop sysid": {}
-    },
-    "router eigrp 1": {
-        "distribute-list prefix PL out GigabitEthernet1": {},
-        "distribute-list route-map RM in GigabitEthernet1": {}
     },
     "ip forward-protocol nd": {},
     "ip http server": {},
     "ip http authentication local": {},
     "ip http secure-server": {},
     "ip route 0.0.0.0 0.0.0.0 GigabitEthernet1 10.10.20.254": {},
-    "ip route 192.168.1.0 255.255.255.0 GigabitEthernet2": {},
     "ip ssh rsa keypair-name ssh-key": {},
     "ip ssh version 2": {},
     "ip scp server enable": {},
@@ -168,10 +115,6 @@
         "stopbits 1": {}
     },
     "line vty 0 4": {
-        "login local": {},
-        "transport input ssh": {}
-    },
-    "line vty 5 15": {
         "login local": {},
         "transport input ssh": {}
     },

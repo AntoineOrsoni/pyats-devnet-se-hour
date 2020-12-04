@@ -2,7 +2,12 @@ from pyats.topology import loader
 import os
 
 # Step 0: load the testbed
-testbed = loader.load('{cwd}/testbed.yaml'.format(cwd=os.path.dirname(__file__)))
+cwd = cwd=os.path.dirname(__file__)
+
+# If the python script is executed from the local directory, use local testbed
+if cwd == '': testbed = loader.load(f'./testbed.yaml')
+# Else, the python script is executed from another directory, use testbed in the folder of the script
+else: testbed = loader.load(f'{cwd}/testbed.yaml')
 
 # Step 1: testbed is a dictionnary. Extract the device csr1000v
 csr1000v = testbed.devices["csr1000v"]
