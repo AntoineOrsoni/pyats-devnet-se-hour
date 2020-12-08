@@ -254,3 +254,21 @@ device.connect(init_exec_commands=[],
 `platform.os` has the following values for IOSXE and IOSXR:
 - `iosxe` >> lower case
 - `IOSXR` >> upper case
+
+### diconnect() quickly
+
+To avoid waiting ~10 seconds to disconnect on the device, you can edit your `testbed.yaml` file as such:
+
+```yaml
+    connections:
+      cli:
+        protocol: telnet
+        ip: 10.1.1.1
+        settings:
+          GRACEFUL_DISCONNECT_WAIT_SEC: 0
+          POST_DISCONNECT_WAIT_SEC: 0
+```
+
+More info here:
+
+> https://pubhub.devnetcloud.com/media/unicon/docs/user_guide/connection.html
