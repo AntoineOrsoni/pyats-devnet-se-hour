@@ -229,6 +229,16 @@ The name of the device in your testbed, and the hostname MUST match. It's case s
 unicon.core.errors.TimeoutError: timeout occurred:
 ```
 
+Otherwise, you can also set the `learn_hostname` argument to `True`.
+
+```python
+device.connect(learn_hostname=True)
+```
+
+More information in the documentation below:
+
+> https://pubhub.devnetcloud.com/media/unicon/docs/user_guide/connection.html
+
 ### Don't print the default commands
 
 Don't print the `show version`, `show running-configuration` and the output.
