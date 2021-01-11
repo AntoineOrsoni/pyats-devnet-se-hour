@@ -273,7 +273,7 @@ More info here:
 
 > https://pubhub.devnetcloud.com/media/unicon/docs/user_guide/connection.html
 
-### parsing an already saved output
+### Parsing an already saved output
 
 If you already have an output, and don't want to reconnect to the device to parse it, you can!
 
