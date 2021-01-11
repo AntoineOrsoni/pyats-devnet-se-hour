@@ -9,7 +9,7 @@ Interface              IP-Address      OK? Method Status                Protocol
 GigabitEthernet1       10.10.20.48     YES other  up                    up      
 GigabitEthernet2       unassigned      YES NVRAM  administratively down down    
 GigabitEthernet3       unassigned      YES NVRAM  up                    up      
-Loopback11             1.2.3.1         YES other  up  
+Loopback11             1.2.3.1         YES other  up                    up
 ```
 
 ## Folders

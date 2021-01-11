@@ -272,3 +272,12 @@ To avoid waiting ~10 seconds to disconnect on the device, you can edit your `tes
 More info here:
 
 > https://pubhub.devnetcloud.com/media/unicon/docs/user_guide/connection.html
+
+### parsing an already saved output
+
+If you already have an output, and don't want to reconnect to the device to parse it, you can!
+
+```python
+output = device.execute('<show command>')
+device.parse('<show command>', output=output)
+```
