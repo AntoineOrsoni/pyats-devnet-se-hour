@@ -10,7 +10,7 @@ if cwd == '': testbed = loader.load(f'./testbed.yaml')
 else: testbed = loader.load(f'{cwd}/testbed.yaml')
 
 # Step 1: testbed is a dictionnary. Extract the device csr1000v
-csr1000v = testbed.devices["csr1000v"]
+csr1000v = testbed.devices["csr1000v-1"]
 
 # Step2: Connect to the device
 csr1000v.connect(init_exec_commands=[], init_config_commands=[], log_stdout=False)
