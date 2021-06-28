@@ -39,7 +39,7 @@ device.connect(init_exec_commands=[],
 
 ### Step 0
 
-Use the `parse()` method on the `csr1000v` object to get a structured output of the `show ip interface brief` command. Save it to a variable.
+Use the `parse()` method on the `csr1000v-1` object to get a structured output of the `show ip interface brief` command. Save it to a variable.
 
 Documentation can be found here:
 

@@ -6,7 +6,7 @@ In the third exercice, we will connect on multiple devices of the same testbed. 
 
 ```
 -----------------------------------
--- Connected on device: csr1000v --
+-- Connected on device: csr1000v-1 --
 -----------------------------------
 Loopback333 -- 3.3.3.3
 Loopback99 -- 99.99.99.99
@@ -37,7 +37,6 @@ The file with the exercise is in the `exercise` folder. An example of solution c
 The testbed is already loaded for you. Fore more information about the `topology.loader.load()` API, please refer to the documentation below:
 
 > https://pubhub.devnetcloud.com/media/pyats/docs/topology/creation.html#testbed-file
-
 
 The below arguments avoid pritting the `show version`, `show running-configuration` and the output.
 

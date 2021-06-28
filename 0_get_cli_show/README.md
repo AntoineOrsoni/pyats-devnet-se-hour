@@ -6,9 +6,9 @@ In the first exercice, we will connect to the device and get an unstructued show
 
 ```
 Interface              IP-Address      OK? Method Status                Protocol
-GigabitEthernet1       10.10.20.48     YES other  up                    up      
-GigabitEthernet2       unassigned      YES NVRAM  administratively down down    
-GigabitEthernet3       unassigned      YES NVRAM  up                    up      
+GigabitEthernet1       10.10.20.48     YES other  up                    up    
+GigabitEthernet2       unassigned      YES NVRAM  administratively down down  
+GigabitEthernet3       unassigned      YES NVRAM  up                    up    
 Loopback11             1.2.3.1         YES other  up                    up
 ```
 
@@ -26,9 +26,10 @@ Load the testbed. Use the `loader.load()` API. Fore more information about the `
 
 ### Step 1
 
-A `testbed` is a `pyats.topology.testbed.Testbed` object. It has a `devices` attribute, which is a dictionnary of all devices in the testbed. 
+A `testbed` is a `pyats.topology.testbed.Testbed` object. It has a `devices` attribute, which is a dictionnary of all devices in the testbed.
+
 * Try to print it.
-* Extract the `csr1000v` device. 
+* Extract the`csr1000v-1` device.
 
 ### Step 2
 

@@ -6,7 +6,7 @@ testbed:
       password: C1sco12345
 
 devices:
-  csr1000v:
+  csr1000v-1:
     type: iosxe
     os: iosxe
     connections:
