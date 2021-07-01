@@ -10,7 +10,7 @@ if cwd == '': testbed = load(f'./testbed.yaml')
 # Else, the python script is executed from another directory, use testbed in the folder of the script
 else: testbed = load(f'{cwd}/testbed.yaml')
 
-csr1000v = testbed.devices["csr1000v"]
+csr1000v = testbed.devices["csr1000v-1"]
 
 # Connect to the device
 csr1000v.connect(init_exec_commands=[], init_config_commands=[], log_stdout=False)

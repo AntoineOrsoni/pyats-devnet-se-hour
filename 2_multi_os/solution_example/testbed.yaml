@@ -2,7 +2,7 @@ testbed:
   name: XE_Testbed
 
 devices:
-  csr1000v1:
+  csr1000v-1:
     type: iosxe
     os: iosxe
     credentials:
