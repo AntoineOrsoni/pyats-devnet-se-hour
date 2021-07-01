@@ -59,12 +59,6 @@ if __name__ == '__main__':
     # set debug level DEBUG, INFO, WARNING
     logger.setLevel(logging.INFO)
 
-    # Loading device information
-    cwd = os.path.dirname(__file__)
-
-    # If the python script is executed from the local directory, use local testbed
-    if cwd == '': testbed = load(f'./testbed.yaml')
-    # Else, the python script is executed from another directory, use testbed in the folder of the script
-    else: testbed = load(f'{cwd}/testbed.yaml')
+    testbed = load(f'./testbed.yaml')
 
     aetest.main(testbed = testbed)
