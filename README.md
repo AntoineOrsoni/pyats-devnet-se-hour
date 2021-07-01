@@ -1,4 +1,5 @@
 # Pre-requisites
+
 ## Testbed
 
 We're using the always-on DevNet sandboxes in the `testbed.yaml` file. More information about DevNet sandboxes here:
@@ -15,7 +16,14 @@ To install the right packages, please run the command below:
 pip install -r requirements.txt
 ```
 
+## Supporter Python versions
+
+You can find the list of supported Python versions for pyATS here:
+
+> https://pubhub.devnetcloud.com/media/pyats-getting-started/docs/prereqs/prerequisites.html
+
 # Exercices
+
 ## 0. Get CLI show command output
 
 In the first exercice, we will connect to the device and get an unstructued show command output (ex: `show ip interface brief`).
@@ -24,9 +32,9 @@ In the first exercice, we will connect to the device and get an unstructued show
 
 ```
 Interface              IP-Address      OK? Method Status                Protocol
-GigabitEthernet1       10.10.20.48     YES other  up                    up      
-GigabitEthernet2       unassigned      YES NVRAM  administratively down down    
-GigabitEthernet3       unassigned      YES NVRAM  up                    up      
+GigabitEthernet1       10.10.20.48     YES other  up                    up    
+GigabitEthernet2       unassigned      YES NVRAM  administratively down down  
+GigabitEthernet3       unassigned      YES NVRAM  up                    up    
 Loopback11             1.2.3.1         YES other  up                    up  
 ```
 
@@ -198,6 +206,7 @@ In this fifth exercice, we will use AEtest to define and execute test cases. In 
 > https://pubhub.devnetcloud.com/media/pyats/docs/aetest/index.html
 
 # pyATS documentation
+
 ## Official documentation
 
 pyATS documentation can be found here:
@@ -252,6 +261,7 @@ device.connect(init_exec_commands=[],
 ### device.learn('platform')
 
 `platform.os` has the following values for IOSXE and IOSXR:
+
 - `iosxe` >> lower case
 - `IOSXR` >> upper case
 
