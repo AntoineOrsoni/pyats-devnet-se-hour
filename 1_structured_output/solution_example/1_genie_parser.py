@@ -1,15 +1,7 @@
 # New module! Now using genie!
 from genie.testbed import load
-import os
 
-# Loading device information
-cwd = os.path.dirname(__file__)
-
-# If the python script is executed from the local directory, use local testbed
-if cwd == '': testbed = load(f'./testbed.yaml')
-# Else, the python script is executed from another directory, use testbed in the folder of the script
-else: testbed = load(f'{cwd}/testbed.yaml')
-
+testbed = load('./testbed.yaml')
 csr1000v = testbed.devices["csr1000v-1"]
 
 # Connect to the device
