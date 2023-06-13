@@ -8,7 +8,7 @@ We're using the always-on DevNet sandboxes in the `testbed.yaml` file. More info
 
 We will be using XE and XR sandboxes for the exercises attached. Feel free to use others.
 
-## Dependances
+## Dependencies
 
 To install the pyats packages, please run the command below:
 
@@ -22,11 +22,11 @@ You can find the list of supported Python versions for pyATS here:
 
 > https://pubhub.devnetcloud.com/media/pyats-getting-started/docs/prereqs/prerequisites.html
 
-# Exercices
+# Exercises
 
 ## 0. Get CLI show command output
 
-In the first exercise, we will connect to the device and get an unstructued show command output (ex: `show ip interface brief`).
+In the first exercise, we will connect to the device and get an unstructured show command output (ex: `show ip interface brief`).
 
 ### Output example
 
@@ -103,7 +103,7 @@ Null0 -- Unassigned
 
 ## 3. Diff between two config files
 
-In this fourth exercice, we will connect on the CSR1000v sandbox. We will `learn` the configuration of the device, and save it in two files.
+In this fourth exercise, we will connect on the CSR1000v sandbox. We will `learn` the configuration of the device, and save it in two files.
 
 We will manually modify one of them, and use the `Diff` capability of Genie to print the change.
 
@@ -250,7 +250,7 @@ More information in the documentation below:
 
 ### Don't print the device output
 
-Don't print the  the output.
+Don't print the output.
 
 ```python
 device.connect(log_stdout=False)
@@ -263,7 +263,7 @@ device.connect(log_stdout=False)
 - `iosxe` >> lower case
 - `IOSXR` >> upper case
 
-### diconnect() quickly
+### disconnect() quickly
 
 To avoid waiting ~10 seconds to disconnect on the device, you can edit your `testbed.yaml` file as such:
 

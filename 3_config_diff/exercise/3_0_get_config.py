@@ -1,6 +1,5 @@
 # New module! Now using genie!
 from genie.testbed import load
-import os
 import json
 
 testbed = load(f"testbed.yaml")

@@ -57,9 +57,9 @@ Use one of the device attribute to print the name of the device.
 
 ### Step 2
 
-Use Genie Parser to parse `show ip interface brief` command. Parsers allows you to parse show commands into structured output (JSON/Dictionary).
+Use Genie Parser to parse `show ip interface brief` command. Parser allows you to parse show commands into structured output (JSON/Dictionary).
 
-Navigate through the dictionnary. Extract each interface name, and its IP address.
+Navigate through the dictionary. Extract each interface name, and its IP address.
 
 Genie `parse()` method documentation can be found here:
 

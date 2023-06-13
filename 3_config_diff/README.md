@@ -27,11 +27,10 @@ The testbed is already loaded for you. Fore more information about the `topology
 > https://pubhub.devnetcloud.com/media/pyats/docs/topology/creation.html#testbed-file
 
 
-The below arguments avoid pritting the `show version`, `show running-configuration` and the output.
+The below arguments avoid printing the `show version`, `show running-configuration` and the output.
 
 ```python
-device.connect(init_exec_commands=[],
-               init_config_commands=[],
+device.connect(init_config_commands=[],
                log_stdout=False)
 ```
 
@@ -63,10 +62,10 @@ For each of them, save its output in a variable. As-is, these two variables will
 
 > https://docs.python.org/3/library/json.html
 
-Hint: method to be used is `json.load()` (because we're a loading a file). If we were loading a **s**tring, methold would be `json.loads()` (with an `s`).
+Hint: method to be used is `json.load()` (because we're a loading a file). If we were loading a **s**tring, method would be `json.loads()` (with an `s`).
 
 ### Step 1
 
-Use Genie `Diff` documentation to print the differences between the two dictionnaries: `config_original` and `config_modified`. It can be found here:
+Use Genie `Diff` documentation to print the differences between the two dictionaries: `config_original` and `config_modified`. It can be found here:
 
 > https://pubhub.devnetcloud.com/media/genie-docs/docs/userguide/utils/index.html#diff

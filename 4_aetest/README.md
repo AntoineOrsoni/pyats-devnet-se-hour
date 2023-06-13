@@ -75,7 +75,7 @@ The loader is now testbed loader is now imported from the Genie library.
 The testbed and devices objects returned by the loader are the sames as with the pyATS. However, additional methods are added by Genie.
 
 
-To send information inline, in the ouput of your script, use the `logger.info()` method. For instance, in order to print the below output, you can use `logger.info('Cat8000V connected')`
+To send information inline, in the output of your script, use the `logger.info()` method. For instance, in order to print the below output, you can use `logger.info('Cat8000V connected')`
 
 ```
 2020-10-21T11:05:40: %SCRIPT-INFO: Cat8000V connected
@@ -139,7 +139,7 @@ AEtest is composed of 3 main sections:
 
 `Testcase` is a container/collection of smaller tests. Testcases are the workhorse of every testscript, carrying out the assessments that determines the quality of the product under scrutiny.
 
-`CommonCleanup` is the last section to run within each testscript. Any configurations, initializations and environment changes that occured during this script run should be cleaned up (removed) here.
+`CommonCleanup` is the last section to run within each testscript. Any configurations, initializations and environment changes that occurred during this script run should be cleaned up (removed) here.
 
 More information about each part, in the documentation below:
 

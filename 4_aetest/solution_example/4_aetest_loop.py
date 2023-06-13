@@ -1,7 +1,6 @@
 # import the aetest module
 from pyats import aetest
 import logging
-import os
 
 logger = logging.getLogger(__name__)
 
