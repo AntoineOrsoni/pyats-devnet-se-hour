@@ -5,61 +5,57 @@ import os
 
 logger = logging.getLogger(__name__)
 
+
 class CommonSetup(aetest.CommonSetup):
-    
     @aetest.subsection
     def connect_to_devices(self, testbed):
-        
         for device in testbed:
             # don't do the default show version
             # don't do the default config
-            device.connect(init_exec_commands=[],
-                           init_config_commands=[],
-                           log_stdout=False)
-            
-            logger.info('{device} connected'.format(device=device.alias))
+            device.connect(init_config_commands=[], log_stdout=False)
+
+            logger.info(f"{device.alias} connected")
+
 
 class CheckVersion(aetest.Testcase):
-
     @aetest.test
     def check_current_version(self, testbed):
-
         # Local vars
         test_success = True
-        xe_version = '16.9.3'
-        xr_version = '6.5.3'
+        xe_version = "17.9.2a"
+        xr_version = "7.3.2"
         fail_devices = []
 
         for device in testbed:
-            
-            #Learning platform information
-            platform = device.learn('platform')
+            # Learning platform information
+            platform = device.learn("platform")
 
-            # We use .lower() so we're not case sensitive
-            if (platform.os.lower() == 'iosxe' and platform.version != xe_version): 
+            # We use .lower() so we're not case-sensitive
+            if platform.os.lower() == "iosxe" and platform.version != xe_version:
                 test_success = False
                 fail_devices.append(device.alias)
 
-            # We use .lower() so we're not case sensitive
-            if (platform.os.lower() == 'iosxr' and platform.version != xr_version): 
+            # We use .lower() so we're not case-sensitive
+            if platform.os.lower() == "iosxr" and platform.version != xr_version:
                 test_success = False
                 fail_devices.append(device.alias)
 
-            logger.debug('{device} running {platformos} has OS: {os}'.format(device=device.alias, platformos=platform.os, os=platform.version))
+            logger.debug(
+                f"{device.alias} running {platform.os} has OS: {platform.version}"
+            )
 
         # If we have devices with the wrong OS, print their names
-        assert test_success == True, 'List of fail devices: {list}'.format(list=fail_devices)
+        assert test_success == True, f"List of fail devices: {fail_devices}"
+
 
 class CommonCleanup(aetest.CommonCleanup):
-
     @aetest.subsection
     def disconnect_from_devices(self, testbed):
-        
         for device in testbed:
             device.disconnect()
 
-if __name__ == '__main__':
 
+if __name__ == "__main__":
     # local imports
     from genie.testbed import load
     import sys
@@ -67,12 +63,6 @@ if __name__ == '__main__':
     # set debug level DEBUG, INFO, WARNING
     logger.setLevel(logging.INFO)
 
-    # Loading device information
-    cwd = os.path.dirname(__file__)
+    testbed = load(f"./testbed.yaml")
 
-    # If the python script is executed from the local directory, use local testbed
-    if cwd == '': testbed = load(f'./testbed.yaml')
-    # Else, the python script is executed from another directory, use testbed in the folder of the script
-    else: testbed = load(f'{cwd}/testbed.yaml')
-
-    aetest.main(testbed = testbed)
+    aetest.main(testbed=testbed)

@@ -1,6 +1,6 @@
 # 0. Get CLI show command output
 
-In the first exercice, we will connect to the device and get an unstructued show command output (ex: `show ip interface brief`).
+In the first exercise, we will connect to the device and get an unstructured show command output (ex: `show ip interface brief`).
 
 ## Output example
 
@@ -26,28 +26,27 @@ Load the testbed. Use the `loader.load()` API. Fore more information about the `
 
 ### Step 1
 
-A `testbed` is a `pyats.topology.testbed.Testbed` object. It has a `devices` attribute, which is a dictionnary of all devices in the testbed.
+A `testbed` is a `pyats.topology.testbed.Testbed` object. It has a `devices` attribute, which is a dictionary of all devices in the testbed.
 
-* Try to print it.
-* Extract the`csr1000v-1` device.
+* Extract the`Cat8000v` device
 
 ### Step 2
 
-Connect to the device. Use the `connect()` method to do so. It's explained here:
+Connect to the device. Use the `connect()` method to do so. It is explained here:
 
 > https://pubhub.devnetcloud.com/media/pyats/docs/connections/manager.html#method-instantiate-connect
+> https://pubhub.devnetcloud.com/media/unicon/docs/user_guide/connection.html
 
-The below arguments avoid pritting the `show version`, `show running-configuration` and the output.
+By default, after connecting to a device, pyATS will send a bunch of exec and configuration level commands. It will also send logging to standard output. You can disable them by editing their respective arguments: init_exec_commands, init_config_commands and log_stdout.
 
 ```python
-device.connect(init_exec_commands=[],
-               init_config_commands=[],
+device.connect(init_config_commands=[],
                log_stdout=False)
 ```
 
 ### Step 3
 
-Use the `execute()` method on the `csr1000v` object to send a CLI command to the device. Get the `show interface brief` output, and save it in a variable.
+Use the `execute()` method on the device object to send a CLI command to the router. Get the `show interface brief` output, and save it in a variable.
 
 More information about the `execute()` method here:
 
@@ -56,3 +55,9 @@ More information about the `execute()` method here:
 ### Step 4
 
 Print the output.
+
+### Step 5
+
+Disconnect from the device. Use the `disconnect()` method to do so. It is explained here:
+
+> https://pubhub.devnetcloud.com/media/pyats/docs/connections/manager.html#method-disconnect

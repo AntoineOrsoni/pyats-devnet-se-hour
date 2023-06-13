@@ -8,4 +8,4 @@ config_modified = "to be replaced"
 config_original = "to be replaced"
 
 # Step 1: Printting the differences
-print ("the differences")
+print("the differences")

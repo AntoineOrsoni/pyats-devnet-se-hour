@@ -1,15 +1,13 @@
 from pyats.topology import loader
-import os
 
-# Step 0: load the testbed
+# Step 0: Load the testbed
 
-# Step 1: testbed is a dictionnary. Extract the device csr1000v
+# Step 1: testbed.devices is a dictionary. Extract the device Cat8000v
 
-# Step 2: connect to the device
+# Step 2: Connect to the device
 
-# Step 3: saving the `show ip interface brief` output in a variable
+# Step 3: Save the `show ip interface brief` output in a variable
 
-# Step 4: pritting the `show ip interface brief` output
+# Step 4: Print the `show ip interface brief` output
 
-# Disconnect from the device
-csr1000v.disconnect()
+# Step 5: Disconnect from the device

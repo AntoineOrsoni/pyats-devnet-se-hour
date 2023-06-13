@@ -1,14 +1,14 @@
 testbed:
   name: XE_Testbed
+  credentials:
+    default:
+      username: admin
+      password: C1sco12345
 
 devices:
-  csr1000v-1:
+  Cat8000V:
     type: iosxe
     os: iosxe
-    credentials:
-      default:
-        username: developer
-        password: C1sco12345
     connections:
       vty:
         protocol: ssh
@@ -17,10 +17,6 @@ devices:
   iosxr1:
     type: iosxr
     os: iosxr
-    credentials:
-      default:
-        username: admin
-        password: C1sco12345
     connections:
       vty:
         protocol: ssh

@@ -1,6 +1,6 @@
 ## 4. AEtest: Automated Easy Testing
 
-In this fifth exercice, we will use AEtest to define and execute test cases. In our example, we will:
+In this fifth exercise, we will use AEtest to define and execute test cases. In our example, we will:
 
 1. Connect to the devices (IOS XE, IOS XR),
 2. Assert their current OS version,
@@ -15,7 +15,7 @@ In this fifth exercice, we will use AEtest to define and execute test cases. In 
 2020-10-21T11:05:39: %AETEST-INFO: +------------------------------------------------------------------------------+
 2020-10-21T11:05:39: %AETEST-INFO: |                    Starting subsection connect_to_devices                    |
 2020-10-21T11:05:39: %AETEST-INFO: +------------------------------------------------------------------------------+
-2020-10-21T11:05:40: %SCRIPT-INFO: csr1000v connected
+2020-10-21T11:05:40: %SCRIPT-INFO: Cat8000V connected
 2020-10-21T11:05:42: %SCRIPT-INFO: iosxr1 connected
 2020-10-21T11:05:42: %AETEST-INFO: The result of subsection connect_to_devices is => PASSED
 2020-10-21T11:05:42: %AETEST-INFO: The result of common setup is => PASSED
@@ -70,23 +70,15 @@ The file with the exercise is in the `exercise` folder. An example of solution c
 
 **Please note that we are now using the `Genie` library!**
 
-The testbed is already loaded for you. Fore more information about the `topology.loader.load()` API, please refer to the documentation below:
+The loader is now testbed loader is now imported from the Genie library. 
 
-> https://pubhub.devnetcloud.com/media/pyats/docs/topology/creation.html#testbed-file
+The testbed and devices objects returned by the loader are the sames as with the pyATS. However, additional methods are added by Genie.
 
 
-The below arguments avoid pritting the `show version`, `show running-configuration` and the output.
-
-```python
-device.connect(init_exec_commands=[],
-               init_config_commands=[],
-               log_stdout=False)
-```
-
-To send information inline, in the ouput of your script, use the `logger.info()` method. For instance, in order to print the below output, you can use `logger.info('csr1000v connected')`
+To send information inline, in the ouput of your script, use the `logger.info()` method. For instance, in order to print the below output, you can use `logger.info('Cat8000V connected')`
 
 ```
-2020-10-21T11:05:40: %SCRIPT-INFO: csr1000v connected
+2020-10-21T11:05:40: %SCRIPT-INFO: Cat8000V connected
 ```
 
 ## Step 0
@@ -96,8 +88,8 @@ In the `CommonSetup` section, use a loop to `connect()` to each device of the te
 ## Step 1
 
 In this step, we will check the OS version of the devices in the testbed.
-* XE should be `16.9.3`
-* XR should be `6.5.3`
+* XE should be `17.9.2a`
+* XR should be `7.3.2`
 
 ### Step 1.0
 
@@ -107,7 +99,7 @@ For each device in the testbed, we first need to learn about the platform inform
 
 ### Step 1.1
 
-Use a condition to check if the platform is XE or XR. Depending of the OS, check that the device has the right `os`.
+Use a condition to check if the platform is XE or XR. Depending on the OS, check that the device has the right `os`.
 
 For each device that passes the test, print a message such as `Device {name} passed. Running version {os}`. You can use `logger.info('Your message')` to do so.
 
@@ -167,3 +159,11 @@ If your test is not yet coded, but you would like it to pass so your whole code 
 def connect_to_devices(self, testbed):
     pass
 ```
+
+# AETest Loops
+
+In this exercise we are looping over devices with for loops. AETest offer built-in loops functionalities. Example can be found here:
+
+> https://pubhub.devnetcloud.com/media/pyats/docs/aetest/loop.html
+
+The solution aetest_loop.py is an example on how loop can be used to simplify test code.

@@ -1,12 +1,12 @@
 ## 2. Get structured show command output for multiple OS (XE and XR)
 
-In the third exercice, we will connect on multiple devices of the same testbed. They are running different OS (XE and XR). We will see that we can get the same structured output with the same line of code.
+In the third exercise, we will connect on multiple devices of the same testbed. They are running different OS (XE and XR). We will see that we can get the same structured output with the same line of code.
 
 ### Output example
 
 ```
 -----------------------------------
--- Connected on device: csr1000v-1 --
+-- Connected on device: Cat8000V --
 -----------------------------------
 Loopback333 -- 3.3.3.3
 Loopback99 -- 99.99.99.99
@@ -34,17 +34,10 @@ The file with the exercise is in the `exercise` folder. An example of solution c
 
 **Please note that we are now using the `Genie` library!**
 
-The testbed is already loaded for you. Fore more information about the `topology.loader.load()` API, please refer to the documentation below:
+The loader is now testbed loader is now imported from the Genie library. 
 
-> https://pubhub.devnetcloud.com/media/pyats/docs/topology/creation.html#testbed-file
+The testbed and devices objects returned by the loader are the sames as with the pyATS. However, additional methods are added by Genie.
 
-The below arguments avoid pritting the `show version`, `show running-configuration` and the output.
-
-```python
-device.connect(init_exec_commands=[],
-               init_config_commands=[],
-               log_stdout=False)
-```
 
 ## File 0 - Noob version
 
@@ -84,7 +77,7 @@ Use the `disconnect()` method on each device to nicely disconnect from the devic
 
 ### Step 0, Step 1, Step 3
 
-You can reuse the code you did for `File 0`. Dont forget to `diconnect()` from each device.
+You can reuse the code you did for `File 0`. Don't forget to `diconnect()` from each device.
 
 ### Step 1
 

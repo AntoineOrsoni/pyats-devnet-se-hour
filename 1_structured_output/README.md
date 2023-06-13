@@ -1,6 +1,6 @@
 # 1. Get structured show command output
 
-In the second exercice, we will leverage Genie parsers to get a structured output (JSON). Complete list of interfaces.
+In the second exercise, we will leverage Genie parsers to get a structured output (JSON) of a list of interfaces.
 
 ## Output example
 
@@ -21,25 +21,13 @@ The file with the exercise is in the `exercise` folder. An example of solution c
 
 **Please note that we are now using the `Genie` library!**
 
-The testbed is already loaded for you. Fore more information about the `topology.loader.load()` API, please refer to the documentation below:
+The loader is now testbed loader is now imported from the Genie library. 
 
-> https://pubhub.devnetcloud.com/media/pyats/docs/topology/creation.html#testbed-file
-
-The `connect()` method is explained here:
-
-> https://pubhub.devnetcloud.com/media/pyats/docs/connections/manager.html#method-instantiate-connect
-
-The below arguments avoid pritting the `show version`, `show running-configuration` and the output.
-
-```python
-device.connect(init_exec_commands=[],
-               init_config_commands=[],
-               log_stdout=False)
-```
+The testbed and devices objects returned by the loader are the sames as with the pyATS. However, additional methods are added by Genie.
 
 ### Step 0
 
-Use the `parse()` method on the `csr1000v-1` object to get a structured output of the `show ip interface brief` command. Save it to a variable.
+Use the `parse()` method on the `cat8000v` object to get a structured output of the `show ip interface brief` command. Save it to a variable.
 
 Documentation can be found here:
 
@@ -52,3 +40,9 @@ Available parsers can be found here:
 ### Step 1
 
 Use a loop to iterate through your list of `interfaces`. Print each interface name and its IP address. Refer to the output example, above.
+
+*You may print the parsed output first in order to understand the structure of the return object.*
+
+You can also find the schema of the return object in the genie documentation
+
+> https://pubhub.devnetcloud.com/media/genie-feature-browser/docs/#/parsers/show%2520ip%2520interface%2520brief%2520%257Binterface%257D

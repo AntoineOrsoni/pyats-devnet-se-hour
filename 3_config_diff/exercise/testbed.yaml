@@ -2,15 +2,15 @@ testbed:
   name: XE_Testbed
   credentials:
     default:
-      username: developer
+      username: admin
       password: C1sco12345
 
 devices:
-  csr1000-1:
+  Cat8000V:
     type: iosxe
     os: iosxe
     connections:
       vty:
         protocol: ssh
-        ip: ios-xe-mgmt.cisco.com
-        port: 8181
+        ip: sandbox-iosxe-latest-1.cisco.com
+        port: 22

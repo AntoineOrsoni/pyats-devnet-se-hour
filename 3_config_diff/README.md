@@ -1,17 +1,17 @@
 ## 3. Diff between two config files
 
-In this fourth exercice, we will connect on the CSR1000v sandbox. We will `learn` the configuration of the device, and save it in two files.
+In this fourth exercise, we will connect on the Cat8000V sandbox. We will `learn` the configuration of the device, and save it in two files.
 
 We will manually modify one of them, and use the `Diff` capability of Genie to print the change.
 
 ### Output example
 
 ```
- interface Loopback2345:
-- description Added via python Antoine script: 
-+ description Added via python RESTCONF script: 
-+ ip address 2.3.4.5 255.255.255.255: 
-- ip address 2.3.4.6 255.255.255.255: 
+ interface GigabitEthernet1:
+- description MANAGEMENT INTERFACE - DON'T TOUCH ME:
++ description MANAGEMENT INTERFACE - DON'T TOUCH ME BUT I DID:
+- ip address 10.10.20.48 255.255.255.0:
++ ip address 10.10.20.50 255.255.255.0:
 ```
 
 ## Folders
@@ -45,7 +45,7 @@ The file 0 will get the configuration from the device, and save it into two file
 
 ### Learning the configuration of a device
 
-To learn the configuration of a device, the below command can be used:
+To learn the configuration of a device, the below command can be used, it returns the configuration in nested dictionaries for easy navigation. 
 
 ```python
 device.learn('config')

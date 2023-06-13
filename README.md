@@ -6,17 +6,17 @@ We're using the always-on DevNet sandboxes in the `testbed.yaml` file. More info
 
 > http://devnetsandbox.cisco.com/RM/Topology
 
-We will be using XE and XR sandboxes for the exercices attached. Feel free to use others.
+We will be using XE and XR sandboxes for the exercises attached. Feel free to use others.
 
 ## Dependances
 
-To install the right packages, please run the command below:
+To install the pyats packages, please run the command below:
 
 ```
-pip install -r requirements.txt
+pip install "pyats[full]"
 ```
 
-## Supporter Python versions
+## Supported Python versions
 
 You can find the list of supported Python versions for pyATS here:
 
@@ -26,7 +26,7 @@ You can find the list of supported Python versions for pyATS here:
 
 ## 0. Get CLI show command output
 
-In the first exercice, we will connect to the device and get an unstructued show command output (ex: `show ip interface brief`).
+In the first exercise, we will connect to the device and get an unstructued show command output (ex: `show ip interface brief`).
 
 ### Output example
 
@@ -44,7 +44,7 @@ Loopback11             1.2.3.1         YES other  up                    up
 
 ## 1. Get structured show command output
 
-In the second exercice, we will leverage Genie parsers to get a structured output (JSON). Complete list of interfaces.
+In the second exercise, we will leverage Genie parsers to get a structured output (JSON). Complete list of interfaces.
 
 ### Output example
 
@@ -67,13 +67,13 @@ GigabitEthernet3 -- Unassigned
 
 ## 2. Get structured show command output for multiple OS (XE and XR)
 
-In the third exercice, we will connect on multiple devices of the same testbed. They are running different OS (XE and XR). We will see that we can get the same structured output with the same line of code.
+In the third exercise, we will connect on multiple devices of the same testbed. They are running different OS (XE and XR). We will see that we can get the same structured output with the same line of code.
 
 ### Output example
 
 ```
 -----------------------------------
--- Connected on device: csr1000v --
+-- Connected on device: Cat8000V --
 -----------------------------------
 Loopback333 -- 3.3.3.3
 Loopback99 -- 99.99.99.99
@@ -135,7 +135,7 @@ device.learn('config')
 
 ## 4. AEtest: Automated Easy Testing
 
-In this fifth exercice, we will use AEtest to define and execute test cases. In our example, we will:
+In this fifth exercise, we will use AEtest to define and execute test cases. In our example, we will:
 
 1. Connect to the devices (IOS XE, IOS XR),
 2. Assert their current OS version,
@@ -150,7 +150,7 @@ In this fifth exercice, we will use AEtest to define and execute test cases. In 
 2020-10-21T11:05:39: %AETEST-INFO: +------------------------------------------------------------------------------+
 2020-10-21T11:05:39: %AETEST-INFO: |                    Starting subsection connect_to_devices                    |
 2020-10-21T11:05:39: %AETEST-INFO: +------------------------------------------------------------------------------+
-2020-10-21T11:05:40: %SCRIPT-INFO: csr1000v connected
+2020-10-21T11:05:40: %SCRIPT-INFO: Cat8000V connected
 2020-10-21T11:05:42: %SCRIPT-INFO: iosxr1 connected
 2020-10-21T11:05:42: %AETEST-INFO: The result of subsection connect_to_devices is => PASSED
 2020-10-21T11:05:42: %AETEST-INFO: The result of common setup is => PASSED
@@ -232,7 +232,7 @@ pyats.utils.yaml.exceptions.LoadError: Content of 'testbed.yaml' failed to load 
 
 ### Hostname and testbed mismatch
 
-The name of the device in your testbed, and the hostname MUST match. It's case sensitive.
+The name of the device in your testbed, and the hostname MUST match. It's case-sensitive.
 
 ```
 unicon.core.errors.TimeoutError: timeout occurred:
@@ -248,14 +248,12 @@ More information in the documentation below:
 
 > https://pubhub.devnetcloud.com/media/unicon/docs/user_guide/connection.html
 
-### Don't print the default commands
+### Don't print the device output
 
-Don't print the `show version`, `show running-configuration` and the output.
+Don't print the  the output.
 
 ```python
-device.connect(init_exec_commands=[],
-               init_config_commands=[],
-               log_stdout=False)
+device.connect(log_stdout=False)
 ```
 
 ### device.learn('platform')
