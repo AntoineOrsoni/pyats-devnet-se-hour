@@ -61,7 +61,7 @@ if __name__ == "__main__":
     import sys
 
     # set debug level DEBUG, INFO, WARNING
-    logger.setLevel(logging.DEBUG)
+    logger.setLevel(logging.INFO)
 
     testbed = load(f"testbed.yaml")
 
