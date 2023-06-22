@@ -77,7 +77,7 @@ Use the `disconnect()` method on each device to nicely disconnect from the devic
 
 ### Step 0, Step 1, Step 3
 
-You can reuse the code you did for `File 0`. Don't forget to `diconnect()` from each device.
+You can reuse the code you did for `File 0`. Don't forget to `disconnect()` from each device.
 
 ### Step 1
 
@@ -87,7 +87,7 @@ You can reuse the code you did for `File 0`.
 
 Instead of learning a few cli at the time, you can learn the whole feature and have it into 1 structured output (JSON/Dictionary). This structure is agnostic between all OS (i.e. identical between all the OS).
 
-You can read about the Genie `parse()` method here:
+You can read about the Genie `learn()` method here:
 
 > https://pubhub.devnetcloud.com/media/genie-docs/docs/cookbooks/explore.html?highlight=genie%20testbed#learn-devices-features-into-structured-output
 
