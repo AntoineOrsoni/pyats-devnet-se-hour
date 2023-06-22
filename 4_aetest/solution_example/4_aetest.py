@@ -9,7 +9,6 @@ class CommonSetup(aetest.CommonSetup):
     @aetest.subsection
     def connect_to_devices(self, testbed):
         for device in testbed:
-            # don't do the default show version
             # don't do the default config
             device.connect(init_config_commands=[], log_stdout=False)
 
